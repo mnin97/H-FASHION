@@ -1,0 +1,179 @@
+.footer{
+    background-color: #000;
+    padding: 100px 80px;
+    position: relative;
+    color: #fff;
+    .logo{
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            background: url(/assets/images/img_logo_footer.png);
+            width: 278px;
+            height: 30px;
+        }
+    }
+    .footer-link{
+            position: absolute;
+            right: 100px;
+        .link-join{
+            font-weight: 900;
+            text-align: left;
+            position: relative;
+            height: 30px;
+            width: 165px;
+            &.active{
+                &::after{
+                    transform: rotate(180deg);
+                }
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                
+                right: 0;
+                width: 30px;
+                height: 30px;
+                background: url(/assets/images/icon_familysite_arrow.png) no-repeat 50% 50%;
+            }
+        }        
+        .open-list{
+            &.active{
+                display: block;
+            }
+            display: none;
+            position: absolute;
+            right: 0;
+            bottom: 30px;
+            width: 165px;
+            padding: 15px;
+            background: #fff;
+            border: 1px solid #fafafa;
+            p{
+                color: #000;
+                font-weight: 700;
+                line-height: 1.5;
+            }
+            .list{
+                margin: 5px 0 0;
+                li{ 
+                    color: #000;
+                    line-height: 1.5;
+                    font-size: 12px;
+                }
+            }
+
+        }
+    }
+    .footer-info{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 90px;
+        p{
+            font-size: 14px;
+            color:#666;
+            line-height: 25px;
+                a{
+                    margin: 0 15px;
+                }
+        }
+        .right{
+            display: flex;
+            gap: 100px;
+            margin-right: 35px;    
+            .about-list{
+                font-size: 14px;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                .title{
+                    font-weight: 900;
+                    margin-bottom: 10px;    
+                }
+                .item{
+                    color: #666;
+                }
+            }
+            .help-list{
+                font-size: 14px;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                .title{
+                    font-weight: 900;
+                    margin-bottom: 10px;    
+                }
+                .item{
+                    color: #666;
+                    &:nth-child(4){
+                        color: #999999;
+                    }
+                }
+            }
+        }
+    }
+    .contact{
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        font-size: 14px;
+        color: #666;
+        .call{}
+        .fax{}
+        .e-mail{}
+    }
+    .copy{
+        margin-bottom: 40px;
+        font-size: 11px;
+        color: #666;
+        letter-spacing: 4px;
+    }
+    .brand{
+        font-size: 14px;
+        color: #666;
+    }
+    .sns-list{
+        position: absolute;
+        right: 116px;
+        top: 55%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;  
+        .item{ 
+            position: relative;
+            padding-left: 30px;
+            line-height: 24px;
+            font-size: 14px;
+            color: #666;
+            &:nth-child(2){
+                &::after{
+                    background: url(/assets/images/icon_footer_sns.png) no-repeat;
+                    background-position: -24px 0;
+                }
+            }
+            &:nth-child(3){
+                &::after{
+                    background: url(/assets/images/icon_footer_sns.png) no-repeat;
+                    background-position:-48px 0;
+                }
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 24px;
+                height: 24px;
+                background: url(/assets/images/icon_footer_sns.png) no-repeat;
+               
+            }
+            
+        }
+    }   
+}
+
+
+

@@ -1,0 +1,11 @@
+@mixin pc-lg(){
+    @media (max-width:1830px) {
+        @content;
+    }
+}
+@mixin pc-md(){
+    @media (max-width:1605px) {
+        @content;
+    }
+}
+
