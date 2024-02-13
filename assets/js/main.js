@@ -6,7 +6,7 @@ const mainSlide = new Swiper(".main-slide .swiper", {
  slidesPerView:"auto",  
  centeredSlides:true,
  speed:1000,
- loop:true,
+//  loop:true,
  spaceBetween:"20",
   navigation: {
     prevEl: ".prev",
@@ -24,11 +24,24 @@ const mainSlide = new Swiper(".main-slide .swiper", {
 $(".main-slide .side-util .btn-autoplay").on("click",function(){
   mainSlide.autoplay.stop()
 })
-$(".main-slide .side-util .play").on("click",function(){
+$(".main-slide .side-util .slide1-play").on("click",function(){
   mainSlide.autoplay.start()
 })
+
+$(".main-slide .slide1-play").on("click",function(){
+  $(".btn-autoplay").css("display","inline-block")
+  $(this).css("display","none")
+})
+
+$(".main-slide .btn-autoplay").on("click",function(){
+  $(".slide1-play").css("display","inline-block")
+  $(this).css("display","none")
+})
+
+
+
 const brandnameSlide = new Swiper(".brand-news .banner-name-slide .swiper", {
-  slidesPerView: "3",
+  slidesPerView: 3,
   loop:true,
   centeredSlides:true,
   navigation : {
@@ -37,9 +50,6 @@ const brandnameSlide = new Swiper(".brand-news .banner-name-slide .swiper", {
 	},
 });
 
-brandnameSlide.on("slideChange",function(){
-  brandParenttSlide.slideToLoop(this.realIndex);
-})
 
 
 const brandParenttSlide = new Swiper(".brand-news .parent-slide", {
@@ -47,14 +57,21 @@ const brandParenttSlide = new Swiper(".brand-news .parent-slide", {
   speed: 500,
 });
 
-brandParenttSlide.on("slideChange",function(){
-  brandnameSlide.slideToLoop(this.realIndex);
-  
+
+brandnameSlide.on("slideChange",function(){
+  brandParenttSlide.slideToLoop(this.realIndex);
 })
 
 
+// brandnameSlide.controller.control = brandParenttSlide
+// // brandParenttSlide.on("slideChange",function(){
+// //   brandnameSlide.slideToLoop(this.realIndex);
+  
+// // })
+
+
 const brandChildSlide = new Swiper(".brand-news .child-slide", {
-      loop: true,
+      // loop: true,
       speed: 500,
       pagination: {
         el: ".swiper-pagination",
@@ -69,10 +86,10 @@ const brandChildSlide = new Swiper(".brand-news .child-slide", {
 
 const styleSlide1 = new Swiper('.style-book .slide1',{
   navigation : {
-    nextEl : '.style-book .next', 
-    prevEl : '.style-book .prev', 
+    nextEl:'.style-book .next', 
+    prevEl:'.style-book .prev', 
 	},
-  loop:true,
+  // loop:true,
   allowTouchMove:false,
   autoplay: {
     delay: 3000,
@@ -93,11 +110,11 @@ styleSlide1.on("slideChange",function(){
 
 $(".style-book .autoplay").on("click",function(){
   $(this).css("display" ,"none")
-  $(".style-book .play").css("display","inline-block")
+  $(".style-book .slide-play").css("display","inline-block")
   styleSlide1.autoplay.stop()
 })
 
-$(".style-book .play").on("click",function(){
+$(".style-book .slide-play").on("click",function(){
   $(this).css("display" ,"none")
   $(".style-book .autoplay").css("display","inline-block")
   styleSlide1.autoplay.start()
@@ -106,7 +123,7 @@ $(".style-book .play").on("click",function(){
 
 const newProductSlide = new Swiper(".new-product .swiper", {
   
-  loop: true,
+  // loop: true,
   spaceBetween:20,
   navigation : {
     nextEl : '.next-btn', 
@@ -131,7 +148,7 @@ const newProductSlide = new Swiper(".new-product .swiper", {
 
 const recommenSlide = new Swiper(".recommend-area .swiper", {
   
-  loop: true,
+  // loop: true,
   spaceBetween:20,
   navigation : {
     nextEl : '.next', 
@@ -228,61 +245,85 @@ const secondSwiper = $(".new-product #slide2");
 const brandSwiper = $(".new-product2 #slide1");
 const brand2Swiper = $(".new-product2 #slide2");
 
-$(".new-product .title1").on("click",function(){
-  $(this).addClass("on")
-  $(".new-product .title2").removeClass("on")
-  const tabId = $(this).data('tab');
+$('.title-box a').click(function(){
+  tabName1 = $(this).data('tab');
+  $(this).addClass('on').siblings().removeClass('on')
+
+  $(tabName1).addClass('active').siblings().removeClass('active');
+})
+$('.tab-item a').click(function(e){
+  e.preventDefault();
+  tabName2 = $(this).data('tab');
+  $(this).parent().addClass('on').siblings().removeClass('on')
+
+  $(tabName2).addClass('on').siblings().removeClass('on');
+})
+// $('#slide2 .tab-item a').click(function(e){
+//   e.preventDefault();
+//   tabName2 = $(this).data('tab');
+//   $(this).parent().addClass('on').siblings().removeClass('on')
+
+//   $(tabName2).addClass('on').siblings().removeClass('on');
+// })
+
+
+
+
+// $(".new-product .title1").on("click",function(){
+//   $(this).addClass("on")
+//   $(".new-product .title2").removeClass("on")
+//   const tabId = $(this).data('tab');
   
-  $(".cont-brand").removeClass("active")
-  $(tabId).addClass("active")
+//   $(".cont-brand").removeClass("active")
+//   $(tabId).addClass("active")
 
  
   
   
-  firstSwiper.addClass("slide1")
-  secondSwiper.removeClass("slide1")
+//   firstSwiper.addClass("slide1")
+//   secondSwiper.removeClass("slide1")
   
-})
+// })
 
 
 
-$(".new-product #slide1 .tab-list, .new-product #slide1 .tab-list").on("click", ".tab-item a", function (e) {
-  e.preventDefault();
+// $(".new-product #slide1 .tab-list, .new-product #slide1 .tab-list").on("click", ".tab-item a", function (e) {
+//   e.preventDefault();
 
-  // 모든 브랜드 숨기기
-  $(".cont").removeClass("on");
+//   // 모든 브랜드 숨기기
+//   $(".cont").removeClass("on");
 
-  // 클릭한 탭에 해당하는 브랜드만 보이기
-  const targetBrandId = $(this).data('tab');
-  $(targetBrandId).addClass("on");
-});
+//   // 클릭한 탭에 해당하는 브랜드만 보이기
+//   const targetBrandId = $(this).data('tab');
+//   $(targetBrandId).addClass("on");
+// });
 
-$(".new-product #slide2 .tab-list").on("click", ".tab-item a", function (e) {
-  e.preventDefault();
+// $(".new-product #slide2 .tab-list").on("click", ".tab-item a", function (e) {
+//   e.preventDefault();
 
-  // 모든 브랜드 숨기기
-  $(".cont").removeClass("on");
+//   // 모든 브랜드 숨기기
+//   $(".cont").removeClass("on");
 
-  // 클릭한 탭에 해당하는 브랜드만 보이기
-  const targetBrandId = $(this).data('tab');
-  $(targetBrandId).addClass("on");
-});
+//   // 클릭한 탭에 해당하는 브랜드만 보이기
+//   const targetBrandId = $(this).data('tab');
+//   $(targetBrandId).addClass("on");
+// });
 
 
 
-$(".new-product .title2").on("click",function(){
-  $(this).addClass("on")
-  $(".new-product .title1").removeClass("on")
+// $(".new-product .title2").on("click",function(){
+//   $(this).addClass("on")
+//   $(".new-product .title1").removeClass("on")
 
-  const tabId = $(this).data('tab');
+//   const tabId = $(this).data('tab');
   
  
-  $(".cont-brand").removeClass("active");
-  $(tabId).addClass("active");
+//   $(".cont-brand").removeClass("active");
+//   $(tabId).addClass("active");
 
-  secondSwiper.addClass("slide1")
-  firstSwiper.removeClass("slide1")
-})
+//   secondSwiper.addClass("slide1")
+//   firstSwiper.removeClass("slide1")
+// })
 
 
 
@@ -298,16 +339,16 @@ $(".recommend-area .stop").on("click",function(){
   $(this).css("display","none")
 })
 
-$(".main-slide .side-util .btn-autoplay").on("click", function () {
-  $(this).css("display", "none"); 
-  $(".play").addClass("active");
-});
+// $(".main-slide .side-util .btn-autoplay").on("click", function () {
+//   $(this).css("display", "none"); 
+//   $(".play").addClass("active");
+// });
 
 
-$(".play").on("click", function () {
-  $(this).removeClass("active")
-  $(".main-slide .side-util .btn-autoplay").css("display" , "block")
-});
+// $(".play").on("click", function () {
+//   $(this).removeClass("active")
+//   $(".main-slide .side-util .btn-autoplay").css("display" , "block")
+// });
 
 $(document).on("scroll", function() {
   var scrollPosition = $(this).scrollTop();
@@ -347,13 +388,13 @@ function closeYouTubePopup() {
 }
 
 
-$(".new-product .tab-list .tab-item").on("click", function() {
+// $(".new-product .tab-list .tab-item").on("click", function() {
   
-  $(".new-product .tab-list .tab-item").removeClass("on");
+//   $(".new-product .tab-list .tab-item").removeClass("on");
   
   
-  $(this).addClass("on");
-});
+//   $(this).addClass("on");
+// });
 
 
 

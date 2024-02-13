@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hfashion</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/js/main.js" defer></script>
     
   </head>
@@ -371,8 +372,10 @@
           
           <div class="side-util">
             <div class="swiper-pagination"></div>
-              <button class="btn-autoplay" aria-label="일시정지"></button>
-              <button class="play" aria-label="재생"></button>
+              <div class="btn-container">
+                <button class="btn-autoplay" aria-label="일시정지"></button>
+                <button class="slide1-play" aria-label="재생"></button>
+              </div>
           </div>
           
         </section>
@@ -737,6 +740,24 @@
                 <li class="swiper-slide">
                   <button class="brand-btn"><p>VERONICA BEARD</p></button>
                 </li>
+                <li class="swiper-slide">
+                  <button class="brand-btn"><p>TOMMY HILFIGER</p></button>
+                </li>
+                <li class="swiper-slide">
+                  <button class="brand-btn"><p>DKNY</p></button>
+                </li>
+                <li class="swiper-slide">
+                  <button class="brand-btn"><p>VERONICA BEARD</p></button>
+                </li>
+                <!-- <li class="swiper-slide">
+                  <button class="brand-btn"><p>TOMMY HILFIGER</p></button>
+                </li>
+                <li class="swiper-slide">
+                  <button class="brand-btn"><p>DKNY</p></button>
+                </li>
+                <li class="swiper-slide">
+                  <button class="brand-btn"><p>VERONICA BEARD</p></button>
+                </li> -->
               </ul>
               <button class="btn prev" aria-label="이전슬라이드"></button>
               <button class="btn next" aria-label="다음슬라이드"></button>
@@ -749,6 +770,258 @@
 
           <div class="swiper parent-slide">
             <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="container">
+                  <div class="left">
+                    <h2 class="top-title">NEW</h2>
+                    <a href="#" class="join-link"><p>브랜드관 가기</p></a>
+                    <ul class="list">
+                      <li class="item">
+                        <a href="#">
+                          <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/THBR/24/01/19/GM0124011981962_1_ORGINL_1705654397604.jpg?RS=600x600&AR=0&CS=400x600" alt=""></div>
+                          <div class="txt-box">
+                            <p class="etc">TOMMY HILFIGER WOMEN</p>
+                            <p class="title">에센셜 코튼 블렌드 파카</p>
+                            <div class="price-box">
+                              <p class="price">400,500</p>
+                              <p class="regular">445,000</p>
+                              <p class="percent">10%</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="item">
+                        <a href="#">
+                          <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/THBR/24/01/19/GM0124011981959_1_ORGINL_1705654491148.jpg?RS=600x600&AR=0&CS=400x600" alt=""></div>
+                          <div class="txt-box">
+                            <p class="etc">TOMMY HILFIGER WOMEN</p>
+                            <p class="title">부츠컷 하이웨이스트 스트레치 데님 팬츠</p>
+                            <div class="price-box">
+                              <p class="price">436.500</p>
+                              <p class="regular">485,500</p>
+                              <p class="percent">10%</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="item">
+                        <a href="#">
+                          <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/THBR/24/01/19/GM0124011981961_1_ORGINL_1705654432080.jpg?RS=600x600&AR=0&CS=400x600 " alt=""></div>
+                          <div class="txt-box">
+                            <p class="etc">TOMMY HILFIGER WOMEN</p>
+                            <p class="title">크레스트 그래픽 크루넥 스웨터</p>
+                            <div class="price-box">
+                              <p class="price">436.500</p>
+                              <p class="regular">485,500</p>
+                              <p class="percent">10%</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- 자식슬라이드 -->
+                  <div class="right">
+                    <div class="swiper child-slide">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="img-box"><img src="https://cdn.hfashionmall.com/display/category/THM/A05/A03/contents/285_172434_407_KOR_20240124152736.jpg?RS=850" alt=""></div>
+                          <div class="txt-box">
+                            <p class="brand">TOMMY JEANS</p>
+                            <p class="name">24SS <br>  NEW IN!</p>
+                            <p class="desc">타미진스 신상과 함께 스타일리시한 새해 맞이하기!</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="img-box"><img src="https://cdn.hfashionmall.com/display/category/THM/A05/A03/contents/285_172434_409_KOR_20240124153033.jpg?RS=850" alt=""></div>
+                          <div class="txt-box">
+                            <p class="brand">TOMMY HILFIGER MEN</p>
+                            <p class="name">베스트 <br>  오브 베스트</p>
+                            <p class="desc">SPOTLIGHT ON</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="img-box"><img src="https://cdn.hfashionmall.com/display/category/THM/A05/A03/contents/285_172434_399_KOR_20240117155227.jpg?RS=850" alt=""></div>
+                          <div class="txt-box">
+                            <p class="brand">TOMMY HILFIGER WOMEN</p>
+                            <p class="name">24SS  <br> NEW IN</p>
+                            <p class="desc">공식몰에서 가장 먼저 만나보는 신상</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="container">
+                  <div class="left">
+                    <h2 class="top-title">NEW</h2>
+                    <a href="#" class="join-link"><p>브랜드관 가기</p></a>
+                    <ul class="list">
+                      <li class="item">
+                        <a href="#">
+                          <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/DKBR/24/01/16/GM0124011680596_1_ORGINL_1705397275235.jpg?RS=600x600&AR=0&CS=400x600" alt=""></div>
+                          <div class="txt-box">
+                            <p class="etc">DKNY MEN</p>
+                            <p class="title">스탠카라 집업 양가죽 점퍼</p>
+                            <div class="price-box">
+                              <p class="price">436.500</p>
+                              <p class="regular">485,500</p>
+                              <p class="percent">10%</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="item">
+                        <a href="#">
+                          <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/DKBR/24/01/16/GM0124011680608_1_ORGINL_1706168720016.jpg?RS=600x600&AR=0&CS=400x600" alt=""></div>
+                          <div class="txt-box">
+                            <p class="etc">DKNY MEN</p>
+                            <p class="title">울 혼방 데일리 스트레치 팬츠</p>
+                            <div class="price-box">
+                              <p class="price">436.500</p>
+                              <p class="regular">485,500</p>
+                              <p class="percent">10%</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="item">
+                        <a href="#">
+                          <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/DKBR/24/01/05/GM0124010577789_1_ORGINL_1704445367842.jpg?RS=600x600&AR=0&CS=400x600 " alt=""></div>
+                          <div class="txt-box">
+                            <p class="etc">DKNY MEN</p>
+                            <p class="title">스프링 데일리 카라 니트</p>
+                            <div class="price-box">
+                              <p class="price">436.500</p>
+                              <p class="regular">485,500</p>
+                              <p class="percent">10%</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- 자식슬라이드 -->
+                  <div class="right">
+                    <div class="swiper child-slide">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="img-box"><img src="https://cdn.hfashionmall.com/display/category/THM/A05/A03/contents/285_172435_259_KOR_20240124153321.jpg?RS=850" alt=""></div>
+                          <div class="txt-box">
+                            <p class="brand">DKNY MEN</p>
+                            <p class="name">WINTER <br> OUTER LOOK</p>
+                            <p class="desc">겨울 내내 함께할 든든한 아우터</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="img-box"><img src="https://cdn.hfashionmall.com/display/category/THM/A05/A03/contents/285_172435_254_KOR_20240117155746.jpg?RS=850" alt=""></div>
+                          <div class="txt-box">
+                            <p class="brand">DKNY WOMEN</p>
+                            <p class="name">EASY <br>  & COMFORT</p>
+                            <p class="desc">겨울 외투 속 편하게 입을 캐주얼룩</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="img-box"><img src="https://cdn.hfashionmall.com/display/category/THM/A05/A03/contents/285_172435_245_KOR_20240103135144.jpg?RS=850" alt=""></div>
+                          <div class="txt-box">
+                            <p class="brand">DKNY MEN</p>
+                            <p class="name">F/W <br>  OUTER CURATION</p>
+                            <p class="desc">최대 34%, 시즌 아우터 소개</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="container">
+                  <div class="left">
+                    <h2 class="top-title">NEW</h2>
+                    <a href="#" class="join-link"><p>브랜드관 가기</p></a>
+                    <ul class="list">
+                      <li class="item">
+                        <a href="#">
+                          <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/HFBR/24/01/11/GM0124011179000_0_ORGINL_1704962676973.jpg?RS=600x600&AR=0&CS=400x600" alt=""></div>
+                          <div class="txt-box">
+                            <p class="etc">VERONICA BEARD</p>
+                            <p class="title">페라지아 자켓</p>
+                            <div class="price-box">
+                              <p class="price">436.500</p>
+                              <p class="regular">485,500</p>
+                              <p class="percent">10%</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="item">
+                        <a href="#">
+                          <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/HFBR/24/01/16/GM0124011680312_0_ORGINL_1705375623647.jpg?RS=600x600&AR=0&CS=400x600" alt=""></div>
+                          <div class="txt-box">
+                            <p class="etc">VERONICA BEARD</p>
+                            <p class="title">브릭스턴 팬츠</p>
+                            <div class="price-box">
+                              <p class="price">436.500</p>
+                              <p class="regular">485,500</p>
+                              <p class="percent">10%</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="item">
+                        <a href="#">
+                          <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/HFBR/24/01/16/GM0124011680314_0_ORGINL_1705375573507.jpg?RS=600x600&AR=0&CS=400x600 " alt=""></div>
+                          <div class="txt-box">
+                            <p class="etc">VERONICA BEARD</p>
+                            <p class="title">에르타 탑</p>
+                            <div class="price-box">
+                              <p class="price">436.500</p>
+                              <p class="regular">485,500</p>
+                              <p class="percent">10%</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- 자식슬라이드 -->
+                  <div class="right">
+                    <div class="swiper child-slide">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="img-box"><img src="https://cdn.hfashionmall.com/display/category/THM/A05/A03/contents/285_188604_120_KOR_20240117161157.jpg?RS=850" alt=""></div>
+                          <div class="txt-box">
+                            <p class="brand">VERONICA BEARD</p>
+                            <p class="name">NEW YEAR,  <br> NEW LOOK</p>
+                            <p class="desc">2024 첫 신상 오픈, 5% + 10% 쿠폰 GET!</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="img-box"><img src="https://cdn.hfashionmall.com/display/category/THM/A05/A03/contents/285_188604_116_KOR_20240110151106.jpg?RS=850" alt=""></div>
+                          <div class="txt-box">
+                            <p class="brand">VERONICA BEARD</p>
+                            <p class="name">SEASON  <br> SALE</p>
+                            <p class="desc">1월의 시즌오프 30% OFF</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="img-box"><img src="https://cdn.hfashionmall.com/display/category/THM/A05/A03/contents/285_188604_100_KOR_20231207112233.jpg?RS=850" alt=""></div>
+                          <div class="txt-box">
+                            <p class="brand">VERONICA BEARD</p>
+                            <p class="name">럭셔리 <br>  아우터</p>
+                            <p class="desc">베로니카비어드 신상 아우터 큐레이션</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="swiper-slide">
                 <div class="container">
                   <div class="left">
@@ -1027,7 +1300,7 @@
           <div class="cont-brand active" id="slide1">
 
             <ul class="tab-list">
-              <li class="tab-item"><a href="#" data-tab="#brand1">ASPESI</a></li>
+              <li class="tab-item on"><a href="#" data-tab="#brand1">ASPESI</a></li>
               <li class="tab-item"><a href="" data-tab="#brand2">BENSIMON</a></li>
               <li class="tab-item"><a href="" data-tab="#brand3">Superfeet</a></li>    
             </ul>
@@ -1309,7 +1582,7 @@
           <div class="cont-brand" id="slide2">
 
             <ul class="tab-list">
-              <li class="tab-item"><a href="" data-tab="#brand1_slide2">MEN</a></li>
+              <li class="tab-item on"><a href="" data-tab="#brand1_slide2">MEN</a></li>
               <li class="tab-item"><a href="" data-tab="#brand2_slide2">WOMEN</a></li>
               <li class="tab-item"><a href="" data-tab="#brand3_slide2">KIDS</a></li>
     
@@ -1613,7 +1886,7 @@
               </div>
             </div>
           
-        </div>
+     
 
 
         <section class="style-book">
@@ -1625,7 +1898,7 @@
                 <button class="btn prev"></button>
                 <button class="btn next"></button>
                 <button class="autoplay"></button>
-                <button class="play"></button>
+                <button class="slide-play"></button>
               </div>
 
 
@@ -1648,13 +1921,13 @@
                 <div class="swiper slide1">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <img src="https://cdn.hfashionmall.com/display/category/THM/A05/A03/contents/283_172439_336_KOR_20231219094247.jpg?RS=850" alt="">1
+                      <img src="https://cdn.hfashionmall.com/display/category/THM/A05/A03/contents/283_172439_336_KOR_20231219094247.jpg?RS=850" alt="">
                     </div>
                     <div class="swiper-slide">
-                      <img src="https://cdn.hfashionmall.com/display/category/THM/A05/A03/contents/283_172439_338_KOR_20231219094345.jpg?RS=850" alt="">2
+                      <img src="https://cdn.hfashionmall.com/display/category/THM/A05/A03/contents/283_172439_338_KOR_20231219094345.jpg?RS=850" alt="">
                     </div>
                     <div class="swiper-slide">
-                      <img src="https://cdn.hfashionmall.com/display/category/THM/A05/A03/contents/283_172439_355_KOR_20240126172755.jpg?RS=850" alt="">3
+                      <img src="https://cdn.hfashionmall.com/display/category/THM/A05/A03/contents/283_172439_355_KOR_20240126172755.jpg?RS=850" alt="">
                     </div>
                   </div>
                 </div>
@@ -1664,13 +1937,13 @@
                 <div class="swiper slide2">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <img src="https://cdn.hfashionmall.com/display/category/THM/A05/A03/contents/283_172439_338_KOR_20231219094345.jpg?RS=850" alt="">2
+                      <img src="https://cdn.hfashionmall.com/display/category/THM/A05/A03/contents/283_172439_338_KOR_20231219094345.jpg?RS=850" alt="">
                     </div>
                     <div class="swiper-slide">
-                      <img src="https://cdn.hfashionmall.com/display/category/THM/A05/A03/contents/283_172439_355_KOR_20240126172755.jpg?RS=850" alt="">3
+                      <img src="https://cdn.hfashionmall.com/display/category/THM/A05/A03/contents/283_172439_355_KOR_20240126172755.jpg?RS=850" alt="">
                     </div>
                     <div class="swiper-slide">
-                      <img src="https://cdn.hfashionmall.com/display/category/THM/A05/A03/contents/283_172439_336_KOR_20231219094247.jpg?RS=850" alt="">1
+                      <img src="https://cdn.hfashionmall.com/display/category/THM/A05/A03/contents/283_172439_336_KOR_20231219094247.jpg?RS=850" alt="">
                     </div>
                   </div>
                 </div>
@@ -1680,330 +1953,7 @@
           </div>
         </section>
 
-        <!-- <section class="new-product2">
-          <div class="title-box">
-            <h2 class="title1 on">BRAND BEST</h2>
-            <h2 class="title2">CATEGORY BEST</h2>
-            <button class="link-go">전체보기</button>
-          </div>
-          <ul class="brand-list">
-            <li class="item"><button class="brand-btn"><p>MOOSE KNUCKLES</p></button></li>
-            <li class="item"><button class="brand-btn"><p>Bleu de Chhauffe</p></button></li>
-            <li class="item"><button class="brand-btn"><p>Taylormade</p></button></li>
-            <li class="item"><button class="brand-btn"><p>Rab</p></button></li>
-            <li class="item"><button class="brand-btn"><p>ASPESI</p></button></li>
-            <li class="item"><button class="brand-btn"><p>JERUSALEM SANDALS</p></button></li>
-            <li class="item"><button class="brand-btn"><p>TOMS</p></button></li>
-            <li class="item"><button class="brand-btn"><p>Franco Ferraro</p></button></li>
-            <li class="item"><button class="brand-btn"><p>Zamberian</p></button></li>
-            <li class="item"><button class="brand-btn"><p>SJYP</p></button></li>
-            <li class="item"><button class="brand-btn"><p>SJYP</p></button></li>
-            <button class="more"></button>
-          </ul>
-
-
-          <div class="swiper slide1">
-            <ul class="swiper-wrapper">
-              <li class="swiper-slide">
-                <a href="#">
-                  <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/HFBR/23/12/01/GM0123120169814_1_ORGINL_1701420300615.jpg?RS=600x600&AR=0&CS=400x600" alt=""></div>
-                  <div class="txt-box">
-                    <p class="etc">BALLY</p>
-                    <p class="title">페넌트 바이폴드 아이디 월렛</p>
-                    <div class="price-box">
-                      <p class="price">387,000</p>
-                      <p class="regular">430,000</p>
-                      <p class="percent">10%</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <a href="#">
-                  <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/HFBR/23/12/01/GM0123120169814_1_ORGINL_1701420300615.jpg?RS=600x600&AR=0&CS=400x600" alt=""></div>
-                  <div class="txt-box">
-                    <p class="etc">BALLY</p>
-                    <p class="title">페넌트 바이폴드 아이디 월렛</p>
-                    <div class="price-box">
-                      <p class="price">387,000</p>
-                      <p class="regular">430,000</p>
-                      <p class="percent">10%</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <a href="#">
-                  <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/HFBR/23/12/01/GM0123120169814_1_ORGINL_1701420300615.jpg?RS=600x600&AR=0&CS=400x600" alt=""></div>
-                  <div class="txt-box">
-                    <p class="etc">BALLY</p>
-                    <p class="title">페넌트 바이폴드 아이디 월렛</p>
-                    <div class="price-box">
-                      <p class="price">387,000</p>
-                      <p class="regular">430,000</p>
-                      <p class="percent">10%</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <a href="#">
-                  <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/HFBR/23/12/01/GM0123120169814_1_ORGINL_1701420300615.jpg?RS=600x600&AR=0&CS=400x600" alt=""></div>
-                  <div class="txt-box">
-                    <p class="etc">BALLY</p>
-                    <p class="title">페넌트 바이폴드 아이디 월렛</p>
-                    <div class="price-box">
-                      <p class="price">387,000</p>
-                      <p class="regular">430,000</p>
-                      <p class="percent">10%</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <a href="#">
-                  <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/HFBR/23/12/01/GM0123120169814_1_ORGINL_1701420300615.jpg?RS=600x600&AR=0&CS=400x600" alt=""></div>
-                  <div class="txt-box">
-                    <p class="etc">BALLY</p>
-                    <p class="title">페넌트 바이폴드 아이디 월렛</p>
-                    <div class="price-box">
-                      <p class="price">387,000</p>
-                      <p class="regular">430,000</p>
-                      <p class="percent">10%</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <a href="#">
-                  <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/HFBR/23/12/01/GM0123120169814_1_ORGINL_1701420300615.jpg?RS=600x600&AR=0&CS=400x600" alt=""></div>
-                  <div class="txt-box">
-                    <p class="etc">BALLY</p>
-                    <p class="title">페넌트 바이폴드 아이디 월렛</p>
-                    <div class="price-box">
-                      <p class="price">387,000</p>
-                      <p class="regular">430,000</p>
-                      <p class="percent">10%</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <a href="#">
-                  <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/HFBR/23/12/01/GM0123120169814_1_ORGINL_1701420300615.jpg?RS=600x600&AR=0&CS=400x600" alt=""></div>
-                  <div class="txt-box">
-                    <p class="etc">BALLY</p>
-                    <p class="title">페넌트 바이폴드 아이디 월렛</p>
-                    <div class="price-box">
-                      <p class="price">387,000</p>
-                      <p class="regular">430,000</p>
-                      <p class="percent">10%</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <a href="#">
-                  <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/HFBR/23/12/01/GM0123120169814_1_ORGINL_1701420300615.jpg?RS=600x600&AR=0&CS=400x600" alt=""></div>
-                  <div class="txt-box">
-                    <p class="etc">BALLY</p>
-                    <p class="title">페넌트 바이폴드 아이디 월렛</p>
-                    <div class="price-box">
-                      <p class="price">387,000</p>
-                      <p class="regular">430,000</p>
-                      <p class="percent">10%</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <a href="#">
-                  <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/HFBR/23/12/01/GM0123120169814_1_ORGINL_1701420300615.jpg?RS=600x600&AR=0&CS=400x600" alt=""></div>
-                  <div class="txt-box">
-                    <p class="etc">BALLY</p>
-                    <p class="title">페넌트 바이폴드 아이디 월렛</p>
-                    <div class="price-box">
-                      <p class="price">387,000</p>
-                      <p class="regular">430,000</p>
-                      <p class="percent">10%</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <a href="#">
-                  <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/HFBR/23/12/01/GM0123120169814_1_ORGINL_1701420300615.jpg?RS=600x600&AR=0&CS=400x600" alt=""></div>
-                  <div class="txt-box">
-                    <p class="etc">BALLY</p>
-                    <p class="title">페넌트 바이폴드 아이디 월렛</p>
-                    <div class="price-box">
-                      <p class="price">387,000</p>
-                      <p class="regular">430,000</p>
-                      <p class="percent">10%</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-            </ul>
-            <button class="prev-btn"></button>
-            <button class="next-btn"></button>
-              <div class="swiper-pagination">
-                <button class="autoplay"></button>
-              </div>
-          </div>
-
-          <div class="swiper" >
-            <ul class="swiper-wrapper">
-              <li class="swiper-slide">
-                <a href="#">
-                  <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/HFBR/23/11/08/GM0123110862536_1_ORGINL_1699510683276.jpg?RS=600x600&AR=0&CS=400x600" alt=""></div>
-                  <div class="txt-box">
-                    <p class="etc">BALLY</p>
-                    <p class="title">페넌트 바이폴드 아이디 월렛</p>
-                    <div class="price-box">
-                      <p class="price">387,000</p>
-                      <p class="regular">430,000</p>
-                      <p class="percent">10%</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <a href="#">
-                  <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/HFBR/23/11/08/GM0123110862536_1_ORGINL_1699510683276.jpg?RS=600x600&AR=0&CS=400x600" alt=""></div>
-                  <div class="txt-box">
-                    <p class="etc">BALLY</p>
-                    <p class="title">페넌트 바이폴드 아이디 월렛</p>
-                    <div class="price-box">
-                      <p class="price">387,000</p>
-                      <p class="regular">430,000</p>
-                      <p class="percent">10%</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <a href="#">
-                  <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/HFBR/23/11/08/GM0123110862536_1_ORGINL_1699510683276.jpg?RS=600x600&AR=0&CS=400x600" alt=""></div>
-                  <div class="txt-box">
-                    <p class="etc">BALLY</p>
-                    <p class="title">페넌트 바이폴드 아이디 월렛</p>
-                    <div class="price-box">
-                      <p class="price">387,000</p>
-                      <p class="regular">430,000</p>
-                      <p class="percent">10%</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <a href="#">
-                  <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/HFBR/23/11/08/GM0123110862536_1_ORGINL_1699510683276.jpg?RS=600x600&AR=0&CS=400x600" alt=""></div>
-                  <div class="txt-box">
-                    <p class="etc">BALLY</p>
-                    <p class="title">페넌트 바이폴드 아이디 월렛</p>
-                    <div class="price-box">
-                      <p class="price">387,000</p>
-                      <p class="regular">430,000</p>
-                      <p class="percent">10%</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <a href="#">
-                  <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/HFBR/23/12/01/GM0123120169814_1_ORGINL_1701420300615.jpg?RS=600x600&AR=0&CS=400x600" alt=""></div>
-                  <div class="txt-box">
-                    <p class="etc">BALLY</p>
-                    <p class="title">페넌트 바이폴드 아이디 월렛</p>
-                    <div class="price-box">
-                      <p class="price">387,000</p>
-                      <p class="regular">430,000</p>
-                      <p class="percent">10%</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <a href="#">
-                  <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/HFBR/23/12/01/GM0123120169814_1_ORGINL_1701420300615.jpg?RS=600x600&AR=0&CS=400x600" alt=""></div>
-                  <div class="txt-box">
-                    <p class="etc">BALLY</p>
-                    <p class="title">페넌트 바이폴드 아이디 월렛</p>
-                    <div class="price-box">
-                      <p class="price">387,000</p>
-                      <p class="regular">430,000</p>
-                      <p class="percent">10%</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <a href="#">
-                  <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/HFBR/23/12/01/GM0123120169814_1_ORGINL_1701420300615.jpg?RS=600x600&AR=0&CS=400x600" alt=""></div>
-                  <div class="txt-box">
-                    <p class="etc">BALLY</p>
-                    <p class="title">페넌트 바이폴드 아이디 월렛</p>
-                    <div class="price-box">
-                      <p class="price">387,000</p>
-                      <p class="regular">430,000</p>
-                      <p class="percent">10%</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <a href="#">
-                  <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/HFBR/23/12/01/GM0123120169814_1_ORGINL_1701420300615.jpg?RS=600x600&AR=0&CS=400x600" alt=""></div>
-                  <div class="txt-box">
-                    <p class="etc">BALLY</p>
-                    <p class="title">페넌트 바이폴드 아이디 월렛</p>
-                    <div class="price-box">
-                      <p class="price">387,000</p>
-                      <p class="regular">430,000</p>
-                      <p class="percent">10%</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <a href="#">
-                  <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/HFBR/23/12/01/GM0123120169814_1_ORGINL_1701420300615.jpg?RS=600x600&AR=0&CS=400x600" alt=""></div>
-                  <div class="txt-box">
-                    <p class="etc">BALLY</p>
-                    <p class="title">페넌트 바이폴드 아이디 월렛</p>
-                    <div class="price-box">
-                      <p class="price">387,000</p>
-                      <p class="regular">430,000</p>
-                      <p class="percent">10%</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <a href="#">
-                  <div class="img-box"><img src="https://cdn.hfashionmall.com/goods/HFBR/23/12/01/GM0123120169814_1_ORGINL_1701420300615.jpg?RS=600x600&AR=0&CS=400x600" alt=""></div>
-                  <div class="txt-box">
-                    <p class="etc">BALLY</p>
-                    <p class="title">페넌트 바이폴드 아이디 월렛</p>
-                    <div class="price-box">
-                      <p class="price">387,000</p>
-                      <p class="regular">430,000</p>
-                      <p class="percent">10%</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-            </ul>
-            <button class="prev-btn"></button>
-            <button class="next-btn"></button>
-              <div class="swiper-pagination">
-                <button class="autoplay"></button>
-              </div>
-          </div>
-        </section> -->
-
-
+    
 
         
         <section class="recommend-area">

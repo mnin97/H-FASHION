@@ -43,6 +43,7 @@
             &.active{
                 display: block;
             }
+            z-index: 50;
             display: none;
             position: absolute;
             right: 0;

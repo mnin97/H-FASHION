@@ -89,38 +89,43 @@
         .swiper-pagination-bullet-active{
             background: #c2935f;
         }
-
-        .btn-autoplay{            
-            width: 8px;
-            height: 12px;
-            &::before{
-                content: "";
-                display: inline-block;
-                width: 1px;
-                height: 12px;
-                background: #000;
-            }
-            &::after{
-                margin-left: 6px;
-                content: "";
-                display: inline-block;
-                width: 1px;
-                height: 12px;
-                background: #000;
-            }
-        }
-        .play{
-            width: 8px;
-            height: 12px;
-            font-size: 0;
-            &.active{
-                &::after{   
+        .btn-container{
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            .btn-autoplay{            
+                display: inline-block;;
+                &::before{
+                    float: right;
                     content: "";
-                    border: 6px solid transparent;
-                    border-left: 8px solid #000;
-                    border-right: 0;
+                    display: inline-block;
+                    width: 1px;
+                    height: 12px;
+                    background: #000;
+                }
+                &::after{
+                    margin-right: 5px;
+                    float: left;
+                    content: "";
+                    display: inline-block;
+                    width: 1px;
+                    height: 12px;
+                    background: #000;
                 }
             }
+            .slide1-play{
+                display: none;
+                width: 8px;
+                height: 12px;
+                font-size: 0;
+                    &:after{
+                        content: "";
+                        border: 6px solid transparent;
+                        border-left: 8px solid #000;
+                        border-right: 0;
+                    }
+                }
+       
               
         }
 
@@ -962,20 +967,22 @@
                 }
                 .btn-container{
                     display: flex;
-                    gap: 20px;
+                    gap: 15px;
                     align-items: center;
-                    .prev{
-                        width: 40px;
-                        height: 22px;
-                        background: url(/assets/images/btn_slide_nav2.png) no-repeat;
+                    .slide-play{
+                        display: none;
+                        width: 8px;
+                        height: 12px;
+                        font-size: 0;
+                        &:after{
+                            content: "";
+                            border: 6px solid transparent;
+                            border-left: 8px solid #000;
+                            border-right: 0;
+                        }
                     }
-                    .next{
-                        width: 40px;
-                        height: 22px;
-                        background: url(/assets/images/btn_slide_nav2.png)100% 0 ;
-                    }
-                    .autoplay{
-                        display: inline-block;
+                    .autoplay{      
+                            display: inline-block;;
                         &::before{
                             float: right;
                             content: "";
@@ -994,17 +1001,15 @@
                             background: #000;
                         }
                     }
-                    .play{
-                        display: none;
-                        &::after{
-                            width: 8px;
-                            height: 12px;
-                            display: inline-block;
-                            content: "";
-                            border: 6px solid transparent;
-                            border-left: 8px solid #000;
-                            border-right: 0;
-                        }
+                    .prev{
+                        width: 40px;
+                        height: 22px;
+                        background: url(/assets/images/btn_slide_nav2.png) no-repeat;
+                    }
+                    .next{
+                        width: 40px;
+                        height: 22px;
+                        background: url(/assets/images/btn_slide_nav2.png)100% 0 ;
                     }
                 }
             }
@@ -1299,6 +1304,9 @@
                 }
                 .txt-box{
                     flex: 1;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
                     .item-brand{
                         font-size: 13px;
                         font-weight: 300;
