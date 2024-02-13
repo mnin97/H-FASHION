@@ -1607,7 +1607,7 @@ body.scroll-lock {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background: url(/assets/images/btn_play_02.png) 50% 50% no-repeat;
+  background: url("https://www.hfashionmall.com/hfm_pc/resources/images/btn_play_02.png") 50% 50% no-repeat;
 }
 
 .style-book {
