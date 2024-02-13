@@ -476,6 +476,7 @@ body.scroll-lock {
   background: url(/assets/images/icon_familysite_arrow.png) no-repeat 50% 50%;
 }
 .footer .footer-link .open-list {
+  z-index: 50;
   display: none;
   position: absolute;
   right: 0;
