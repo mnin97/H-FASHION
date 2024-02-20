@@ -187,7 +187,7 @@ body.scroll-lock {
 .header .top .logo {
   width: 183px;
   height: 23px;
-  background: url(/assets/images/img_logo_new.png) no-repeat;
+  background: url("https://www.hfashionmall.com/hfm_pc/resources/images/img_logo_new.png") no-repeat;
 }
 .header .top .item-list {
   display: -webkit-box;
