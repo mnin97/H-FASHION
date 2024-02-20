@@ -1269,7 +1269,7 @@
                         height: 16px;
                         text-align: left;
                         vertical-align: middle;
-                        background: url(/assets/images/icon_point3.png) no-repeat;
+                        background: url("http://127.0.0.1:5501/assets/images/icon_point3.png") no-repeat;
                         .icon{
                             width: 100%;
                             display: inline-block;
@@ -1277,7 +1277,7 @@
                             top: 0;left: 0;
                             height: 16px;
                             font-size: 0;
-                            background: url(/assets/images/icon_point3.png) no-repeat 0 100%;
+                            background: url("http://127.0.0.1:5501/assets/images/icon_point3.png") no-repeat 0 100%;
                         }
                     }
                     .item-color{

@@ -1961,7 +1961,7 @@ body.scroll-lock {
   height: 16px;
   text-align: left;
   vertical-align: middle;
-  background: url(/assets/images/icon_point3.png) no-repeat;
+  background: url("http://127.0.0.1:5501/assets/images/icon_point3.png") no-repeat;
 }
 .review-area .item .wrap .star .point .icon {
   width: 100%;
@@ -1971,7 +1971,7 @@ body.scroll-lock {
   left: 0;
   height: 16px;
   font-size: 0;
-  background: url(/assets/images/icon_point3.png) no-repeat 0 100%;
+  background: url("http://127.0.0.1:5501/assets/images/icon_point3.png") no-repeat 0 100%;
 }
 .review-area .item .wrap .star .item-color {
   overflow: hidden;
