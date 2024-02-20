@@ -1080,6 +1080,7 @@
                 .sub-title{
                     font-size: 18px;
                     margin-bottom: 15px;
+                    display: block;
                 }
             }
         }
@@ -1346,3 +1347,6 @@
             }
         }
     }
+
+    .cont-brand{display: none;}
+    .cont-brand.active{display: block;}

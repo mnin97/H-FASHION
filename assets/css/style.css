@@ -1766,6 +1766,7 @@ body.scroll-lock {
 .recommend-area .top .title-wrapper .title .sub-title {
   font-size: 18px;
   margin-bottom: 15px;
+  display: block;
 }
 .recommend-area .top .btn-container {
   display: -webkit-box;
@@ -2040,4 +2041,12 @@ body.scroll-lock {
   display: block;
   color: #c2935f;
   margin-right: 7px;
+}
+
+.cont-brand {
+  display: none;
+}
+
+.cont-brand.active {
+  display: block;
 }
