@@ -62,14 +62,6 @@ brandnameSlide.on("slideChange",function(){
   brandParenttSlide.slideToLoop(this.realIndex);
 })
 
-
-// brandnameSlide.controller.control = brandParenttSlide
-// // brandParenttSlide.on("slideChange",function(){
-// //   brandnameSlide.slideToLoop(this.realIndex);
-  
-// // })
-
-
 const brandChildSlide = new Swiper(".brand-news .child-slide", {
       // loop: true,
       speed: 500,
@@ -186,15 +178,32 @@ $(".play").on("click",function(){
     $("body").removeClass("scroll-lock")
   })
 
-  //카테고리 호버
-  // 질문 리스트에 갭15를 줘서 그런지 마우스가 벗어나면 뚝뚝 끊기는 느낌이듬
+
   $(".header .bottom .item").hover(function(){
     $(this).find(".sub").addClass("on")
+    
   },
   function(){  
     $(this).find(".sub").removeClass("on")
   }
   )
+  $(".header .bottom .item").hover(function(){
+    $(".header").toggleClass('bg')
+  })
+
+
+  //밑에 헤더 고정시키기
+  let bottomFix = $(".header .bottom").offset().top;
+
+  $(window).scroll(function(){
+    let windowScroll = $(this).scrollTop();
+    if(bottomFix <= windowScroll){
+      $(".header .bottom").addClass("fix")
+    } else{
+      $(".header .bottom").removeClass("fix")
+    }
+    
+  })
 
 
 
@@ -258,75 +267,6 @@ $('.tab-item a').click(function(e){
 
   $(tabName2).addClass('on').siblings().removeClass('on');
 })
-// $('#slide2 .tab-item a').click(function(e){
-//   e.preventDefault();
-//   tabName2 = $(this).data('tab');
-//   $(this).parent().addClass('on').siblings().removeClass('on')
-
-//   $(tabName2).addClass('on').siblings().removeClass('on');
-// })
-
-
-
-
-// $(".new-product .title1").on("click",function(){
-//   $(this).addClass("on")
-//   $(".new-product .title2").removeClass("on")
-//   const tabId = $(this).data('tab');
-  
-//   $(".cont-brand").removeClass("active")
-//   $(tabId).addClass("active")
-
- 
-  
-  
-//   firstSwiper.addClass("slide1")
-//   secondSwiper.removeClass("slide1")
-  
-// })
-
-
-
-// $(".new-product #slide1 .tab-list, .new-product #slide1 .tab-list").on("click", ".tab-item a", function (e) {
-//   e.preventDefault();
-
-//   // 모든 브랜드 숨기기
-//   $(".cont").removeClass("on");
-
-//   // 클릭한 탭에 해당하는 브랜드만 보이기
-//   const targetBrandId = $(this).data('tab');
-//   $(targetBrandId).addClass("on");
-// });
-
-// $(".new-product #slide2 .tab-list").on("click", ".tab-item a", function (e) {
-//   e.preventDefault();
-
-//   // 모든 브랜드 숨기기
-//   $(".cont").removeClass("on");
-
-//   // 클릭한 탭에 해당하는 브랜드만 보이기
-//   const targetBrandId = $(this).data('tab');
-//   $(targetBrandId).addClass("on");
-// });
-
-
-
-// $(".new-product .title2").on("click",function(){
-//   $(this).addClass("on")
-//   $(".new-product .title1").removeClass("on")
-
-//   const tabId = $(this).data('tab');
-  
- 
-//   $(".cont-brand").removeClass("active");
-//   $(tabId).addClass("active");
-
-//   secondSwiper.addClass("slide1")
-//   firstSwiper.removeClass("slide1")
-// })
-
-
-
 
 
 $(".recommend-area .play").on("click",function(){
@@ -339,30 +279,28 @@ $(".recommend-area .stop").on("click",function(){
   $(this).css("display","none")
 })
 
-// $(".main-slide .side-util .btn-autoplay").on("click", function () {
-//   $(this).css("display", "none"); 
-//   $(".play").addClass("active");
-// });
 
 
-// $(".play").on("click", function () {
-//   $(this).removeClass("active")
-//   $(".main-slide .side-util .btn-autoplay").css("display" , "block")
-// });
 
-$(document).on("scroll", function() {
-  var scrollPosition = $(this).scrollTop();
-  console.log(scrollPosition);
-  if(scrollPosition >= 5852){
-    $(".footer-fixed").addClass("fix")
-  }else{
-    $(".footer-fixed").removeClass("fix") 
+
+$(window).on("scroll", function() {
+  var footerOffset = $(".footer").offset().top;
+  var windowScrollTop = $(this).scrollTop();
+  var windowHeight = $(window).height();
+
+  
+  var footerVisible = (footerOffset < windowScrollTop + windowHeight);
+
+  
+  if (footerVisible) {
+    $(".footer-fixed").addClass("fix");
+  } else {
+    $(".footer-fixed").removeClass("fix");
   }
 });
 
-
 $(".footer-fixed .top").on("click", function() {
-  $("html, body").animate({ scrollTop: 0 }, "slow"); // Scroll to the top smoothly
+  $("html, body").animate({ scrollTop: 0 }, "slow"); 
 });
 
 
