@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Pretendard";
   src: url("../fonts/Pretendard-ExtraLight.woff2") format("woff2");
@@ -2001,7 +2002,14 @@ body.scroll-lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   gap: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .review-area .item .bottom .img-box {
   width: 65px;
@@ -2029,9 +2037,14 @@ body.scroll-lock {
   margin: 10px 0;
   font-size: 14px;
   overflow: hidden;
-  height: 16px;
+  height: 32px;
   line-height: 16px;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-line-clamp: 2; /* 표시할 최대 줄 수 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: normal;
   word-break: break-all;

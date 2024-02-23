@@ -6,7 +6,7 @@ const mainSlide = new Swiper(".main-slide .swiper", {
  slidesPerView:"auto",  
  centeredSlides:true,
  speed:1000,
-//  loop:true,
+ loop:true,
  spaceBetween:"20",
   navigation: {
     prevEl: ".prev",
@@ -63,7 +63,7 @@ brandnameSlide.on("slideChange",function(){
 })
 
 const brandChildSlide = new Swiper(".brand-news .child-slide", {
-      // loop: true,
+      loop: true,
       speed: 500,
       pagination: {
         el: ".swiper-pagination",
@@ -81,7 +81,7 @@ const styleSlide1 = new Swiper('.style-book .slide1',{
     nextEl:'.style-book .next', 
     prevEl:'.style-book .prev', 
 	},
-  // loop:true,
+  loop:true,
   allowTouchMove:false,
   autoplay: {
     delay: 3000,
@@ -207,32 +207,30 @@ $(".play").on("click",function(){
 
 
 
+  let currentIndex = 0; // 인덱스 초기화
 
-//랭크 리스트 자동 슬라이드
-var currentIndex = 0; // 인덱스 초기화
-
-function rankList() {
-    var $rankingList = $("#rankingList");
-    var $subs = $rankingList.find(".sub");
-    var $moreView = $rankingList.find(".more-view");
-    
-    // 모든 요소에서 "on" 클래스 제거
-    $subs.removeClass("on");
-    $moreView.removeClass("on");
-
-    // 현재 인덱스에 "on" 클래스 추가
-    $subs.eq(currentIndex).addClass("on");
-    $moreView.eq(currentIndex).addClass("on");
-
-    // 다음 반복을 위해 인덱스 증가
-    currentIndex = (currentIndex + 1) % $subs.length;
-}
-
-// 초기에 함수 실행
-rankList();
-
-// 3초마다 함수 실행하는 간격 설정
-setInterval(rankList, 3000);
+  function rankList() {
+      let rankingList = $("#rankingList");
+      let subs = rankingList.find(".sub");
+      let moreView = rankingList.find(".more-view");
+      
+      // 모든 요소에서 "on" 클래스 제거
+      subs.removeClass("on");
+      moreView.removeClass("on");
+  
+      // 현재 인덱스에 "on" 클래스 추가
+      subs.eq(currentIndex).addClass("on");
+      moreView.eq(currentIndex).addClass("on");
+  
+      // 다음 반복을 위해 인덱스 증가
+      currentIndex = (currentIndex + 1) % subs.length;
+  }
+  
+  // 초기에 함수 실행
+  rankList();
+  
+  // 3초마다 함수 실행하는 간격 설정
+  setInterval(rankList, 3000);
 
 
 // 상품 호버 이벤트
@@ -343,4 +341,9 @@ $(".footer .link-join").on("click", function() {
 
 
   $(".open-list").slideToggle();
+});
+
+
+$(".market").on("click", function() {
+  alert("로그인 후 이용 부탁드립니다.");
 });
